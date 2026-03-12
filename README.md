@@ -19,10 +19,10 @@ This file pulls live weather data from the US Air Force Academy Mesonet (HWAS) a
 - Wind direction (deg)
 - Wind speed (kt)
 - Wind gust (kt)
+- Barometric pressure (in Hg)
 
 ## Other fields shown on HWAS (we're not using)
 - Relative humidity (%)
-- Barometric pressure (in Hg)
 - Precipitation (in)
 - Wind chill (deg F)
 - Heat index / heat stress
