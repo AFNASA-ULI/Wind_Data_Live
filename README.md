@@ -40,15 +40,6 @@ This file pulls live weather data from the US Air Force Academy Mesonet (HWAS) a
 - Station rows show a "Last Report" time
 - Page header states update time in UTC
 
-## Good metadata to keep with the CSV
-- Test date
-- Test start/end time
-- Station used
-- Source URL
-- Polling interval
-- Drone / aircraft used
-- Test location
-- Notes on weather or site conditions
 
 ## Source
 - https://hwas.usafa.edu/
