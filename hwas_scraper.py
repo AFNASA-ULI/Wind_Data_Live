@@ -30,7 +30,8 @@ with open(csv_filename, mode="w", newline="") as file:
         "Speed (kt)",
         "Gust (kt)",
         "Temperature (F)",
-        "Humidity (%)"
+        "Humidity (%)",
+        "Barometer (in Hg)"
     ])
 
 print("CSV header created successfully.")
@@ -55,12 +56,14 @@ try:
                 gust_raw = columns[3].get_text(" ", strip=True)
                 temperature_raw = columns[4].get_text(" ", strip=True)
                 humidity_raw = columns[5].get_text(" ", strip=True)
+                barometer_raw = columns[6].get_text(" ", strip=True)
 
                 direction = extract_number(direction_raw)
                 speed = extract_number(speed_raw)
                 gust = extract_number(gust_raw)
                 temperature = extract_number(temperature_raw)
                 humidity = extract_number(humidity_raw)
+                barometer = extract_number(barometer_raw)
 
                 timestamp = datetime.now().strftime("%m/%d/%Y %H:%M:%S")
                 elapsed_seconds = int(time.time() - start_time)
@@ -75,7 +78,8 @@ try:
                             speed,
                             gust,
                             temperature,
-                            humidity
+                            humidity,
+                            barometer
                         ])
 
                     print("\n--- Cadet Area Weather ---")
@@ -86,6 +90,7 @@ try:
                     print(f"Gust:            {gust} kt")
                     print(f"Temperature:     {temperature} F")
                     print(f"Humidity:        {humidity} %")
+                    print(f"Barometer:       {barometer} in Hg")
 
                 except PermissionError:
                     print("\nCould not write to CSV because the file is open in Excel or locked.")
